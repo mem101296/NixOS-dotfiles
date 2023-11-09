@@ -1,3 +1,11 @@
+My Flakes for my NixOS setup. 
+
+Note: ZSH, Oh-my-zsh, and Powerlevel10k are not yet working
+
+Resources for newbies and myself:
+
+===================================
+
 Video discussing what nixos and nix flakes are
 https://www.youtube.com/watch?v=AGVXJ-TIv3Y
 
