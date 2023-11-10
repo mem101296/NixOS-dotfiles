@@ -36,11 +36,11 @@
 
   };
   
-############################
-### Output               ###
-############################
+##############
+### Output ###
+##############
 
-  outputs = inputs @ { self, nixpkgs, home-manager, nur, ... }: 
+  outputs = inputs @ { self, nixpkgs, home-manager, nur, hyprland, ... }: 
     let
       vars = { #variables for configs
          user = "exspiravit";
@@ -56,15 +56,15 @@
 
     in {
 
-##########
-##Configs
-##########
+##############
+## Configs ###
+##############
 
       nixosConfigurations = {
 
-##########
-##Desktop (unus) Config
-##########
+#################
+##Unus Config ###
+#################
 
         unus = lib.nixosSystem {
           inherit system;
@@ -74,11 +74,11 @@
             hostName = "unus";
             };
           };
-          modules = [                                             # Modules Used
-            nur.nixosModules.nur
+          modules = [# Modules Used
+            nur.nixosModules.nur #Passes Nur
             ./systems/unus
           
-            home-manager.nixosModules.home-manager {              # Home-manager for desktop
+            home-manager.nixosModules.home-manager {#Passes home-manager
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.users.exspiravit = import ./home-manager/home.nix;
@@ -86,9 +86,9 @@
           ];
         };
 
-##########
-##Laptop (duo) Config
-##########
+#################
+## Duo Config ###
+#################
 
 
 
