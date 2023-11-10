@@ -127,6 +127,8 @@
     pkgs.orchis-theme
     pkgs.pop-icon-theme
     pkgs.qogir-icon-theme
+    pkgs.steam
+    pkgs.gamemode
   ];
 
   #all font packages must be put here to be used

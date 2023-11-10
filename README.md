@@ -1,5 +1,8 @@
 My Flakes for my NixOS setup. 
 
+To update nix flake config:
+sudo nixos-rebuild switch --flake .#desktop
+
 Note: ZSH, Oh-my-zsh, and Powerlevel10k are not yet working
 
 Resources for newbies and myself:
