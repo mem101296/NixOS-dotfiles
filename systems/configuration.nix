@@ -147,10 +147,10 @@
   };
 
   #env variables
-  #environment.sessionVariables = rec {
-    #SHELL="/bin/zsh";
-    #ZSH="$HOME/.oh-my-zsh";
- # };
+  environment.sessionVariables = rec {
+    SHELL="/bin/zsh";
+    ZSH="$HOME/.oh-my-zsh";
+ };
 
 ################# 
 ####shome manager
