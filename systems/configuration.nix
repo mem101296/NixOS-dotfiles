@@ -103,10 +103,8 @@
   environment.systemPackages = with pkgs; [
 
     pkgs.mattermost-desktop
-    pkgs.kitty
     pkgs.librewolf
     pkgs.ungoogled-chromium
-    pkgs.vscodium
     pkgs.gnome.gnome-tweaks
     pkgs.signal-desktop
     pkgs.betterbird
@@ -127,10 +125,9 @@
     pkgs.orchis-theme
     pkgs.pop-icon-theme
     pkgs.qogir-icon-theme
-    pkgs.steam
-    pkgs.gamemode
     pkgs.lutris
     pkgs.gnome3.adwaita-icon-theme
+    pkgs.killall
   ];
 
   #all font packages must be put here to be used

@@ -3,6 +3,14 @@
 with lib;
 
 {
+    environment.systemPackages = with pkgs; [
+      wineWowPackages.staging
+      wineWowPackages.waylandFull
+      wineWowPackages.fonts
+      winetricks
+      mono
+    ];
+
     programs.steam = {
       enable = true;
       package = pkgs.steam;
