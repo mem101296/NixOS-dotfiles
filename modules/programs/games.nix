@@ -10,11 +10,13 @@ with lib;
       winetricks
       mono
     ];
+    hardware.opengl.driSupport32Bit = true;
 
     programs.steam = {
       enable = true;
       package = pkgs.steam;
       remotePlay.openFirewall = true;
+      gamescopeSession.enable = true;
     };
     programs.gamemode.enable = true;
 

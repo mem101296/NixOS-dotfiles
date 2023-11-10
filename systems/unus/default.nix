@@ -15,7 +15,7 @@
   imports =
     [
       ./hardware-configuration.nix
-      ../../modules/programs/steam.nix
+      ../../modules/programs/games.nix
     ];
     
     # Bootloader.
