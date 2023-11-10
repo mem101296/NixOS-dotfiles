@@ -13,8 +13,9 @@
 {
 
   imports = (import ../modules/custom ++
-             import ../modules/programs ++
-             import ./hyprland/default.nix);
+             import ../modules/programs #++
+             #import ./hyprland
+             );
 
 ###################
 #### Git Setup ####

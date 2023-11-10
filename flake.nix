@@ -75,6 +75,9 @@
             };
           };
           modules = [# Modules Used
+            hyprland.nixosModules.default {
+              programs.hyprland.enable = true;
+            }
             nur.nixosModules.nur #Passes Nur
             ./systems/unus
           

@@ -4,4 +4,5 @@
 [
   ./vscode.nix
   ./kitty.nix
+  ./hyprland.nix
 ]
