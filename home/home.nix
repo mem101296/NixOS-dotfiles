@@ -12,8 +12,7 @@
 
 {
 
-  imports = (import ../modules/custom ++
-             import ../modules/programs ++
+  imports = (import ../modules ++
              import ./programs
              );
 
