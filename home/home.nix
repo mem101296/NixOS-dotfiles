@@ -13,8 +13,8 @@
 {
 
   imports = (import ../modules/custom ++
-             import ../modules/programs #++
-             #import ./hyprland
+             import ../modules/programs ++
+             import ./programs
              );
 
 ###################
