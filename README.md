@@ -11,7 +11,7 @@
 
 > *Note: ZSH, Oh-my-zsh, and Powerlevel10k are not yet working*
 
-> *Note: I added huge comments for first timers to make it easy to understand*
+### *Note: I added huge comments for first timers to make it easy to understand* ###
 
 ---
 
