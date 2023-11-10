@@ -6,18 +6,18 @@
 #
 { config, nixpkgs, pkgs, vars, lib, ... }:
 
-############################
-### Import Modules       ###
-############################
+#################
+#### Imports ####
+#################
 
 {
 
   imports = (import ../modules/custom ++
              import ../modules/programs);
 
-############################
-### Git setup            ###
-############################
+###################
+#### Git Setup ####
+###################
 
 
   home.username = "exspiravit";
@@ -29,11 +29,11 @@
     userEmail = "mem101296@protonmail.com";
   };
 
-############################
-### variables            ###
-############################
+########################
+#### Home Variables ####
+########################
 
-
+#I leave it here for just in case I need to mod my file later
   home.sessionVariables = {
     # EDITOR = "emacs";
   };

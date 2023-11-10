@@ -1,14 +1,18 @@
+############################################################
+### This file is used to enable and theme Kitty Terminal ###
+############################################################
 { config, lib, pkgs, ... }:
 
 with lib;
 
 {
     programs.kitty = {
-        enable = true;
-        package = pkgs.kitty;
-        shellIntegration.enableZshIntegration = true;
-        theme = "3024 Night";
+        enable = true; #enable Kitty
+        package = pkgs.kitty; #installs the kitty package
+        shellIntegration.enableZshIntegration = true; #enables ZSH integration
+        theme = "3024 Night"; #sets Kitty theme
 
+        #I used extraConfig for my kitty.conf stuff. It allowed "export" and "startup_session" to work.
         extraConfig =
         '' 
             wayland_titlebar_color #000000

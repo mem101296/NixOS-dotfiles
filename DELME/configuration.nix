@@ -6,6 +6,14 @@
 #       ├─ default.nix *
 #       ├─ configuration.nix
 #
+#################   
+####No longer used
+#################
+#################   
+####This is now per system
+#################
+
+#Marked for deletion
 
 { config, nixpkgs, pkgs, vars, lib, ...  }:
 

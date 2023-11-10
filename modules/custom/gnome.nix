@@ -1,3 +1,7 @@
+###################################################################################################
+### This file is used to modify everything gnome. See comments above the settings for more info ###
+###################################################################################################
+
 { config, nixpkgs, pkgs, vars, lib, ... }:
 
 with lib.hm.gvariant;
