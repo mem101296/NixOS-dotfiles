@@ -12,7 +12,7 @@
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable"; #For unstable nixos builds - aka rolling release
     
     home-manager = { #for the use of home manage
-      url = github:nix-community/home-manager;
+      url = github:nix-community/home-manager/;
       inputs.nixpkgs.follows = "nixpkgs"; #forces home manager to use nix package manager instead of it's own
     };
     
