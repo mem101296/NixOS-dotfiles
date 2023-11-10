@@ -1,16 +1,20 @@
-<H6>My Flakes for my NixOS setup.<H6> 
+<H4>My Flakes for my NixOS setup.<H4> 
 
 **To update nix flake config:**
+
 ``sudo nixos-rebuild switch --flake .#desktop``
 
 **To update nix inputs (basically a system update/upgrade):**
+
 ``nix flake update``
 
-*Note: ZSH, Oh-my-zsh, and Powerlevel10k are not yet working*
+
+> *Note: ZSH, Oh-my-zsh, and Powerlevel10k are not yet working*
 
 ---
 
 **Resources for newbies and myself:**
+
 
 - Video discussing what nixos and nix flakes are
     - https://www.youtube.com/watch?v=AGVXJ-TIv3Y
