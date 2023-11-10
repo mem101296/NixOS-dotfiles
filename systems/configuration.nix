@@ -129,6 +129,8 @@
     pkgs.qogir-icon-theme
     pkgs.steam
     pkgs.gamemode
+    pkgs.lutris
+    pkgs.gnome3.adwaita-icon-theme
   ];
 
   #all font packages must be put here to be used
