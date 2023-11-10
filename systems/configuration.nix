@@ -24,7 +24,8 @@
     isNormalUser = true;
     description = "Exspiravit";
     extraGroups = [ "networkmanager" "wheel" ];
-   # shell = pkgs.zsh;
+    shell = pkgs.zsh;
+    ignoreShellProgramCheck = true;
   };
 
 ################# 
