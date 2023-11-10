@@ -9,6 +9,9 @@ with lib;
       wineWowPackages.fonts
       winetricks
       mono
+      lutris
+      gnome3.adwaita-icon-theme
+      gamescope
     ];
     hardware.opengl.driSupport32Bit = true;
 
@@ -27,3 +30,8 @@ with lib;
         "steam-runtime"
     ]; 
 }
+
+#notes
+#If your mouse leaves the game in lutris do the following:
+#Add: "gamescope -w 3840 -h 2160 --" to the command prefix of the game
+#Change the res to match yours of course

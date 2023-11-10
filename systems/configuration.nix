@@ -125,8 +125,6 @@
     pkgs.orchis-theme
     pkgs.pop-icon-theme
     pkgs.qogir-icon-theme
-    pkgs.lutris
-    pkgs.gnome3.adwaita-icon-theme
     pkgs.killall
   ];
 
