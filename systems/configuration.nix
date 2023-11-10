@@ -7,13 +7,9 @@
 #       ├─ configuration.nix
 #
 
-{ config, pkgs, nixpkgs, libs, vars, ... }:
+{ config, nixpkgs, pkgs, vars, lib, ...  }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      #./hardware-configuration.nix
-    ];
     
 #################   
 ####user settings

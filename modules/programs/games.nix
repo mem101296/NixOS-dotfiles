@@ -11,7 +11,6 @@ with lib;
       mono
       lutris
       gnome3.adwaita-icon-theme
-      gamescope
     ];
     hardware.opengl.driSupport32Bit = true;
 
@@ -19,9 +18,15 @@ with lib;
       enable = true;
       package = pkgs.steam;
       remotePlay.openFirewall = true;
-      gamescopeSession.enable = true;
+      #gamescopeSession.enable = true;
     };
     programs.gamemode.enable = true;
+
+    programs.gamescope = {
+      enable = true;
+      package = pkgs.gamescope;
+
+    };
 
 
     nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [

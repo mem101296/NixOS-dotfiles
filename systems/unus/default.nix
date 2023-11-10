@@ -9,7 +9,7 @@
 #           └─ default.nix 
 #
 
-{ pkgs, unstable, ... }:
+{ config, nixpkgs, pkgs, vars, lib, ... }:
 
  {
   imports =
