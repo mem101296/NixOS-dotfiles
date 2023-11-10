@@ -122,6 +122,7 @@
     pkgs.pop-icon-theme
     pkgs.qogir-icon-theme
     pkgs.killall
+    pkgs.discord
   ];
 
   #all font packages must be put here to be used
