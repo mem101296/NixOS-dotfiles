@@ -24,7 +24,7 @@
     isNormalUser = true;
     description = "Exspiravit";
     extraGroups = [ "networkmanager" "wheel" ];
-    shell = pkgs.zsh;
+   # shell = pkgs.zsh;
   };
 
 ################# 
@@ -135,7 +135,7 @@
   ];
 
   #allows zsh to work
-  programs.zsh.enable = true;
+  #programs.zsh.enable = true;
 
 ################# 
 ####system stuff
@@ -147,10 +147,10 @@
   };
 
   #env variables
-  environment.sessionVariables = rec {
-    SHELL="/bin/zsh";
-    ZSH="$HOME/.oh-my-zsh";
-  };
+  #environment.sessionVariables = rec {
+    #SHELL="/bin/zsh";
+    #ZSH="$HOME/.oh-my-zsh";
+ # };
 
 ################# 
 ####shome manager
