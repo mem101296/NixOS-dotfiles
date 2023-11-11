@@ -1,0 +1,1 @@
+#used for hyprland theming and other settings

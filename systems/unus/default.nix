@@ -23,7 +23,9 @@
   imports =
     [
       ./hardware-configuration.nix #Used for hardware config
-      ../../modules/programs/games.nix #Used for game settings
+      ../../modules/games.nix #Used for game settings
+      ../../modules/hyprland.nix #Used for Hyperland system stuff
+
     ];
     
 #####################  

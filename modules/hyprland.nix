@@ -4,17 +4,16 @@
 
   #wayland.windowManager.hyprland.enable = true;
 
-  #config = {
-  #  systemPackages = with pkgs; [
-  #    eww
-  #   rofi-wayland
-  #    dunst
-   #   trayer
-  #    swww
-  #    socat
-  #    geticons
-   # ];
-  #};
+    environment.systemPackages = with pkgs; [
+      eww
+      rofi-wayland
+      dunst
+      trayer
+      swww
+      socat
+      geticons
+    ];
+  }
 
 
   # hyprland configs, based on https://github.com/notwidow/hyprland
@@ -39,5 +38,3 @@
   #  "MOZ_ENABLE_WAYLAND" = "1"; # for firefox to run on wayland
   #  "MOZ_WEBRENDER" = "1";
   #  };
-
-}
