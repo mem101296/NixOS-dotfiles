@@ -157,7 +157,7 @@
       pkgs.killall
       pkgs.discord
       pkgs.notion-app-enhanced
-      pkgs.asar #used to fix notion loading issue
+      pkgs.jdk17
       ################################
       #Gnome stuff - will we removed once I get hyprland working
       pkgs.gnome-extension-manager
