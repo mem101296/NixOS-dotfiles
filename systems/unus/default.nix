@@ -146,17 +146,6 @@
       pkgs.signal-desktop
       pkgs.betterbird
       pkgs.gparted
-      ######
-      #Gnome stuff - will we removed once I get hyprland working
-      pkgs.gnome-extension-manager
-      pkgs.gnomeExtensions.blur-my-shell
-      pkgs.gnomeExtensions.burn-my-windows
-      pkgs.gnomeExtensions.dash-to-dock-for-cosmic
-      pkgs.gnomeExtensions.just-perfection
-      pkgs.gnomeExtensions.launch-new-instance
-      pkgs.gnomeExtensions.user-themes
-      pkgs.gnomeExtensions.pop-shell
-      ######
       pkgs.oh-my-zsh
       pkgs.zsh-powerlevel10k
       pkgs.home-manager
@@ -167,6 +156,19 @@
       pkgs.qogir-icon-theme
       pkgs.killall
       pkgs.discord
+      pkgs.notion-app-enhanced
+      pkgs.asar #used to fix notion loading issue
+      ################################
+      #Gnome stuff - will we removed once I get hyprland working
+      pkgs.gnome-extension-manager
+      pkgs.gnomeExtensions.blur-my-shell
+      pkgs.gnomeExtensions.burn-my-windows
+      pkgs.gnomeExtensions.dash-to-dock-for-cosmic
+      pkgs.gnomeExtensions.just-perfection
+      pkgs.gnomeExtensions.launch-new-instance
+      pkgs.gnomeExtensions.user-themes
+      pkgs.gnomeExtensions.pop-shell
+      ################################
     ];
 
     #all font packages must be put here to be used
