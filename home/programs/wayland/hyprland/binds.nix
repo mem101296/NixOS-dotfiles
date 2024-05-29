@@ -18,8 +18,6 @@
 
       # Switch workspaces with mod + [0-9]
       "$mod, 1, workspace, 1"
-      #"$mod, 1, workspace, 2"
-      #"$mod, 2, workspace, 1"
       "$mod, 2, workspace, 2"
       "$mod, 3, workspace, 3"
       "$mod, 4, workspace, 4"
@@ -29,6 +27,10 @@
       "$mod, 8, workspace, 8"
       "$mod, 9, workspace, 9"
       "$mod, 0, workspace, 10"
+
+      #Move to left or right workspace
+      "$mod, R, workspace, e-1"
+      "$mod, T, workspace, e+1"
 
       # Move active window to a workspace with mod + SHIFT + [0-9]
       "$mod SHIFT, 1, movetoworkspace, 1"
@@ -47,10 +49,10 @@
       "$mod, right, movefocus, r"
       "$mod, up, movefocus, u"
       "$mod, down, movefocus, d"
-      "$mod, R, movefocus, l" #N I U E
-      "$mod, T, movefocus, r"
-      "$mod, F, movefocus, u"
-      "$mod, S, movefocus, d"
+      "$mod SHIFT, R, movefocus, l" #N I U E
+      "$mod SHIFT, T, movefocus, r"
+      "$mod SHIFT, F, movefocus, u"
+      "$mod SHIFT, S, movefocus, d"
 
       # Move Windows
       "$mod, N, movewindow, l" #RTFS
