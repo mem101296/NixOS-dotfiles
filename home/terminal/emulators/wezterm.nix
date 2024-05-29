@@ -19,6 +19,77 @@
     extraConfig = ''
       local wezterm = require "wezterm";
       return {
+        keys = {
+          {
+            key = 'RightArrow',
+            mods = 'CTRL|SHIFT',
+            -- action = wezterm.action.SplitHorizontal({domain = 'CurrentPaneDomain'}),
+            action = wezterm.action.SplitPane { direction = 'Right', size = { Percent = 50 }, }
+          },
+          {
+            key = 'LeftArrow',
+            mods = 'CTRL|SHIFT',
+            -- action = wezterm.action.SplitHorizontal({domain = 'CurrentPaneDomain'}),
+            action = wezterm.action.SplitPane { direction = 'Left', size = { Percent = 50 }, }
+          },
+          {
+            key = 'DownArrow',
+            mods = 'CTRL|SHIFT',
+            -- action = wezterm.action.SplitHorizontal({domain = 'CurrentPaneDomain'}),
+            action = wezterm.action.SplitPane { direction = 'Down', size = { Percent = 50 }, }
+          },
+          {
+            key = 'UpArrow',
+            mods = 'CTRL|SHIFT',
+            -- action = wezterm.action.SplitHorizontal({domain = 'CurrentPaneDomain'}),
+            action = wezterm.action.SplitPane { direction = 'Up', size = { Percent = 50 }, }
+          },
+          {
+            key = 'q',
+            mods = 'CTRL',
+            action = wezterm.action.CloseCurrentPane({confirm = true}),
+          },
+          {
+            key = 'LeftArrow',
+            mods = 'CTRL',
+            action = wezterm.action.ActivatePaneDirection 'Left',
+          },
+          {
+            key = 'RightArrow',
+            mods = 'CTRL',
+            action = wezterm.action.ActivatePaneDirection 'Right',
+          },
+          {
+            key = 'UpArrow',
+            mods = 'CTRL',
+            action = wezterm.action.ActivatePaneDirection 'Up',
+          },
+          {
+            key = 'DownArrow',
+            mods = 'CTRL',
+            action = wezterm.action.ActivatePaneDirection 'Down',
+          },
+          {
+            key = 'LeftArrow',
+            mods = 'CTRL|ALT',
+            action = wezterm.action.AdjustPaneSize { 'Left', 5 },
+          },
+          {
+            key = 'DownArrow',
+            mods = 'CTRL|ALT',
+            action = wezterm.action.AdjustPaneSize { 'Down', 5 },
+          },
+          { 
+            key = 'UpArrow', 
+            mods = 'CTRL|ALT', 
+            action = wezterm.action.AdjustPaneSize { 'Up', 5 } },
+          {
+            key = 'RightArrow',
+            mods = 'CTRL|ALT',
+            action = wezterm.action.AdjustPaneSize { 'Right', 5 },
+          },
+        },
+
         window_background_opacity = 0.7,
         default_cursor_style = 'SteadyBar',
         enable_scroll_bar = true,
@@ -29,6 +100,6 @@
         enable_wayland = false,
         audible_bell = Disabled,
       }
-      '';
+    '';
   };
 }
