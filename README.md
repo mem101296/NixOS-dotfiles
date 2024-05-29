@@ -9,11 +9,12 @@
 ``nix flake update``
 
 
-> *Note: ZSH, Oh-my-zsh, and Powerlevel10k are not yet working*
-
-### *Note: I added huge comments for first timers to make it easy to understand* ###
+### *Note: Now beginner friendly. I still have to go and add comments. I recommend a basic understanding of Nix language. See below for resources* ###
 
 ---
+
+A huge amount of credit is given to fufexan. This is heavely based off their dotfiles
+https://github.com/fufexan/dotfiles
 
 **Resources for newbies and myself:**
 
