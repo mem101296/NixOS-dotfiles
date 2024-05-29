@@ -35,7 +35,7 @@ with lib;
             "javascript.updateImportsOnFileMove.enabled" = "never";
             "typescript.updateImportsOnFileMove.enabled" = "never";
             "window.zoomLevel" = 1;
-            "editor.fontFamily" = "'Comic Mono', 'Comic Mono Bold'";
+            "editor.fontFamily" = "'Noto Sans'";
         };
     };      
 

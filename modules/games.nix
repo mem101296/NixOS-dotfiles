@@ -20,6 +20,7 @@ with lib;
       mono
       lutris
       gnome3.adwaita-icon-theme
+      gamemode
     ];
     hardware.opengl.driSupport32Bit = true;
 

@@ -1,112 +1,83 @@
-#
-#  This file is the first to be run, it has the channels (repos) and configs
-#  Unus = desktop
-#  Duo = laptop
-# Work coming soon
-#
-#  flake.nix 
-#   └─ 
-#
-
 {
-  description = "Unus and Duo ";
+  description = "Lucid's NixOS and Home-Manager flake";
 
-############################
-### Input                ###
-############################
+  outputs = inputs:
+    inputs.flake-parts.lib.mkFlake {inherit inputs;} {
+      systems = ["x86_64-linux"];
 
-  #the things usde to build outputs, like nix-channels
+      imports = [
+        ./home/profiles
+        ./hosts
+       ];
+    };
+
   inputs = {
-    
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable"; #For unstable nixos builds - aka rolling release
-    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable"; #For unstable nixos builds - aka rolling release
-    
-    home-manager = { #for the use of home manage
-      url = github:nix-community/home-manager/;
-      inputs.nixpkgs.follows = "nixpkgs"; #forces home manager to use nix package manager instead of it's own
-    };
-    
-    nur = { #nix user repository
-      url = "github:nix-community/NUR"; 
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+
+    flake-parts = {
+      url = "github:hercules-ci/flake-parts";
+      inputs.nixpkgs-lib.follows = "nixpkgs";
     };
 
-    hyprland.url = "github:hyprwm/Hyprland"; #Hyprland URL
+    #proton-ge-bin.url = "github:GloriousEggroll/proton-ge-custom"; 
 
+    helix.url = "github:helix-editor/helix";
 
-
-  };
-  
-##############
-### Output ###
-##############
-
-  outputs = inputs @ { self, nixpkgs, home-manager, nur, hyprland, ... }: 
-    let
-      vars = { #variables for configs
-         user = "exspiravit";
-         terminal = "kitty";
-         editor = "nano";         
-      };
-      system = "x86_64-linux";                                  # System Architecture
-      pkgs = import nixpkgs {
-        inherit system;
-        config.allowUnfree = true;
-      };
-      lib = nixpkgs.lib;
-
-    in {
-
-##############
-## Configs ###
-##############
-
-      nixosConfigurations = {
-
-#################
-##Unus Config ###
-#################
-
-        unus = lib.nixosSystem {
-          inherit system;
-          specialArgs = {                                         
-            inherit system nixpkgs home-manager vars nur lib;
-            host = {
-            hostName = "unus";
-            };
-          };
-          modules = [# Modules Used
-            hyprland.nixosModules.default {
-              programs.hyprland.enable = true;
-            }
-            nur.nixosModules.nur #Passes Nur
-            ./systems/unus
-          
-            home-manager.nixosModules.home-manager {#Passes home-manager
-              #home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.users.exspiravit = import ./home/home.nix;
-            }
-          ];
-        };
-
-#################
-## Duo Config ###
-#################
-
-
-
-#      nixosConfigurations = (   #imports the system config file
-#        import ./systems {
-#          inherit (nixpkgs) lib; #passes librarys
-#          inherit nixpkgs home-manager nur vars; #passes variables
-#        }
-#      );
-#      homeConfigurations = ( #imports the home manager file
-#        import ./home-manager/home.nix {
-#          inherit (nixpkgs) lib; #passes librarys
-#          inherit nixpkgs home-manager nur vars; #passes variables
-#        }
-#      );
+    hm = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    hypridle = {
+      url = "github:hyprwm/hypridle";
+      inputs.nixpkgs.follows = "hyprland/nixpkgs";
+      inputs.systems.follows = "hyprland/systems";
+    };
+
+    hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
+    #hyprland = {
+      #url = "git+https://github.com/hyprwm/Hyprland?ref=refs/heads/main&rev=716799395a86e2f02b9a15d1d9b535db8efa5d13"; 
+      #};
+
+      #git+https://github.com/hyprwm/Hyprland?ref=refs/heads/main&rev=7ad9116de8d0b7dac27eaf080bd92998a8fb40e5'
+
+    hyprland-contrib = {
+      url = "github:hyprwm/contrib";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    hyprland-plugins = {
+      url = "github:hyprwm/hyprland-plugins";
+      inputs.hyprland.follows = "hyprland";
+    };
+
+    hyprlock = {
+      url = "github:hyprwm/hyprlock";
+      inputs.hyprlang.follows = "hyprland/hyprlang";
+      inputs.nixpkgs.follows = "hyprland/nixpkgs";
+      inputs.systems.follows = "hyprland/systems";
+    };
+
+    hyprpaper = {
+      url = "github:hyprwm/hyprpaper";
+      inputs.hyprlang.follows = "hyprland/hyprlang";
+      inputs.nixpkgs.follows = "hyprland/nixpkgs";
+      inputs.systems.follows = "hyprland/systems";
+    };    
+
+    nix-citizen.url = "github:LovingMelody/nix-citizen";
+    nix-citizen.inputs.nix-gaming.follows = "nix-gaming";
+
+    nix-index-db = {
+      url = "github:Mic92/nix-index-database";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    nix-gaming = {
+      url = "github:fufexan/nix-gaming";
+      inputs.flake-parts.follows = "flake-parts";
+    };
+
+    yazi.url = "github:sxyazi/yazi";
   };
 }
