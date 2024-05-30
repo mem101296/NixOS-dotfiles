@@ -4,12 +4,34 @@
   outputs = inputs:
     inputs.flake-parts.lib.mkFlake {inherit inputs;} {
       systems = ["x86_64-linux"];
-
       imports = [
         ./home/profiles
         ./hosts
-       ];
-    };
+      ];
+      
+      perSystem = {
+        config, 
+        pkgs,
+        system, 
+        ...
+      }:
+        { devShells.default = pkgs.mkShell {
+          buildInputs = [
+            pkgs.pkg-config
+            pkgs.gdb
+            pkgs.rust-bin.nightly.latest.default
+            pkgs.glib
+            pkgs.gtk4
+            pkgs.gtk3
+          ];
+          RUST_SRC_PATH = "${pkgs.rust.packages.stable.rustPlatform.rustLibSrc}";
+        };
+        _module.args.pkgs = import inputs.nixpkgs {
+          inherit system;
+          overlays = [ (import inputs.rust-overlay) ];
+        };
+      };
+    };    
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
@@ -18,6 +40,8 @@
       url = "github:hercules-ci/flake-parts";
       inputs.nixpkgs-lib.follows = "nixpkgs";
     };
+
+    flake-utils.url = "github:numtide/flake-utils";
 
     #proton-ge-bin.url = "github:GloriousEggroll/proton-ge-custom"; 
 
@@ -35,11 +59,6 @@
     };
 
     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
-    #hyprland = {
-      #url = "git+https://github.com/hyprwm/Hyprland?ref=refs/heads/main&rev=716799395a86e2f02b9a15d1d9b535db8efa5d13"; 
-      #};
-
-      #git+https://github.com/hyprwm/Hyprland?ref=refs/heads/main&rev=7ad9116de8d0b7dac27eaf080bd92998a8fb40e5'
 
     hyprland-contrib = {
       url = "github:hyprwm/contrib";
@@ -77,6 +96,8 @@
       url = "github:fufexan/nix-gaming";
       inputs.flake-parts.follows = "flake-parts";
     };
+
+    rust-overlay.url = "github:oxalica/rust-overlay";
 
     yazi.url = "github:sxyazi/yazi";
   };

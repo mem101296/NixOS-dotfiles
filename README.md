@@ -51,6 +51,8 @@ https://github.com/fufexan/dotfiles
 
 - Other resources:
     - https://www.chrisportela.com/posts/home-manager-flake/
+    - https://nixos.wiki/wiki/Rust#Developing_Rust_projects_using_Nix
+    - https://github.com/cpu/rust-flake/blob/main/flake.nix
 
 - Conver Gnone settings to nix flake
     - https://github.com/gvolpe/dconf2nix
