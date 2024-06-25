@@ -9,7 +9,7 @@
 ``nix flake update``
 
 
-# This is heavly influenced by Fufexan dotfiles, with sprinkles of my own flakes and changes.
+## This is heavly influenced by Fufexan dotfiles, with sprinkles of my own flakes and changes.
 
 https://github.com/fufexan/dotfiles/
 
