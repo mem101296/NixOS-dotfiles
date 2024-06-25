@@ -9,9 +9,10 @@
 ``nix flake update``
 
 
-> *Note: ZSH, Oh-my-zsh, and Powerlevel10k are not yet working*
+# This is heavly influenced by Fufexan dotfiles, with sprinkles of my own flakes and changes.
 
-### *Note: I added huge comments for first timers to make it easy to understand* ###
+https://github.com/fufexan/dotfiles/
+
 
 ---
 
