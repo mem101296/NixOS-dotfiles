@@ -65,6 +65,8 @@
       "$mod SHIFT, U, resizeactive, 0 30" #Up
       "$mod SHIFT, E, resizeactive, 30 0" #Down
 
+      "$mod SHIFT, Y, fullscreen"
+
       #Move to left or right workspace DOES NOT WORK YET
       #"binds = {
       #  allow_workspace_cycles = true

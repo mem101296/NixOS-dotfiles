@@ -4,6 +4,8 @@
     ./home-manager.nix
     ./misc.nix
     ./zsh.nix
+    ./flatpak.nix
+    #./shell.nix
     #./virtualisation.nix
   ];
 

@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ inputs, pkgs, ... }:
 
 {
   imports = [
@@ -7,7 +7,32 @@
   ];
   programs.helix = {
     enable = true;
-    package = pkgs.helix;
+    package = inputs.helix.packages.${pkgs.system}.default.overrideAttrs (old: {
+      makeWrapperArgs = with pkgs;
+        old.makeWrapperArgs
+        or []
+        ++ [
+          "--suffix"
+          "PATH"
+          ":"
+          (lib.makeBinPath [
+            lldb #debug stuff
+            clang-tools #For C
+            marksman #markdown
+            nil #nixos
+            nodePackages.bash-language-server #bash
+            nodePackages.vscode-css-languageserver-bin #css
+            nodePackages.vscode-langservers-extracted
+            shellcheck
+            taplo #toml
+            #rust-analyzer #rust
+            #vscode-extensions.vadimcn.vscode-lldb
+          ])
+          "--set-default"
+          "RUST_SRC_PATH"
+          "${rustPlatform.rustcSrc}/library"
+        ];
+    });
     settings = {
       theme = "base16_terminal";
       editor = {

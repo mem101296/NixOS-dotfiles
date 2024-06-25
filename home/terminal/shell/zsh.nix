@@ -51,7 +51,7 @@
       
     '';
     shellAliases = { 
-      ls = "yazi"; 
+      #ls = "yazi"; 
     };
   };
 }

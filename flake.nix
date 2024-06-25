@@ -16,15 +16,18 @@
         ...
       }:
         { devShells.default = pkgs.mkShell {
+          shellHook = ''
+            export RUST_SRC_PATH=${pkgs.rustPlatform.rustLibSrc}
+          '';
           buildInputs = [
             pkgs.pkg-config
             pkgs.gdb
-            pkgs.rust-bin.nightly.latest.default
+            pkgs.rust-bin.stable.latest.default
             pkgs.glib
             pkgs.gtk4
             pkgs.gtk3
+            pkgs.rust-analyzer
           ];
-          RUST_SRC_PATH = "${pkgs.rust.packages.stable.rustPlatform.rustLibSrc}";
         };
         _module.args.pkgs = import inputs.nixpkgs {
           inherit system;
@@ -34,6 +37,9 @@
     };    
 
   inputs = {
+
+    #systems.url = "github:nix-systems/default-linux";
+    
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     flake-parts = {
@@ -41,7 +47,10 @@
       inputs.nixpkgs-lib.follows = "nixpkgs";
     };
 
-    flake-utils.url = "github:numtide/flake-utils";
+    flake-utils = {
+      url = "github:numtide/flake-utils";
+      #inputs.systems.follows = "nixpkgs";
+    };
 
     #proton-ge-bin.url = "github:GloriousEggroll/proton-ge-custom"; 
 
@@ -54,8 +63,9 @@
 
     hypridle = {
       url = "github:hyprwm/hypridle";
+      inputs.hyprlang.follows = "hyprland/hyprlang";
       inputs.nixpkgs.follows = "hyprland/nixpkgs";
-      inputs.systems.follows = "hyprland/systems";
+      #inputs.systems.follows = "hyprland/systems";
     };
 
     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
@@ -74,14 +84,14 @@
       url = "github:hyprwm/hyprlock";
       inputs.hyprlang.follows = "hyprland/hyprlang";
       inputs.nixpkgs.follows = "hyprland/nixpkgs";
-      inputs.systems.follows = "hyprland/systems";
+      #inputs.systems.follows = "hyprland/systems";
     };
 
     hyprpaper = {
       url = "github:hyprwm/hyprpaper";
       inputs.hyprlang.follows = "hyprland/hyprlang";
       inputs.nixpkgs.follows = "hyprland/nixpkgs";
-      inputs.systems.follows = "hyprland/systems";
+      #inputs.systems.follows = "hyprland/systems";
     };    
 
     nix-citizen.url = "github:LovingMelody/nix-citizen";
@@ -94,6 +104,7 @@
 
     nix-gaming = {
       url = "github:fufexan/nix-gaming";
+      inputs.nixpkgs.follows = "nixpkgs";
       inputs.flake-parts.follows = "flake-parts";
     };
 

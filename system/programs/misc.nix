@@ -34,7 +34,10 @@
     geticons #get icons via name
     teamviewer
     r2modman
+    #hdos
+    flatpak
 
+    
     #media
     vlc
     loupe
@@ -50,18 +53,30 @@
   
     #programming
     pkgs.nodejs_22
-    nodePackages_latest.vscode-css-languageserver-bin
+    #nodePackages_latest.vscode-css-languageserver-bin
     python3
-    vscode-langservers-extracted
+    #vscode-langservers-extracted
+    #rustup
+    rust-analyzer
+    cargo
+    rustc
+    #vscode-extensions.vadimcn.vscode-lldb
+    #lldb_17
+    #gcc
+    #glib
 
     #gaming
     #jdk22
     jdk17_headless
     #prismlauncher
+    gtk2
+    gtk3
+    gtk4
+    #openrgb-with-all-plugins
     
     #extra
     _1password-gui
-    notion-app-enhanced
+    #notion-app-enhanced
 
     #work
     zoom-us

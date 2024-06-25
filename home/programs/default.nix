@@ -7,7 +7,7 @@
   imports = [
     ./dunst.nix
     #./games
-    #./media
+    ./media.nix
     ./gtk.nix
     ./misc.nix
     ./nnn.nix

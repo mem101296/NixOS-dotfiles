@@ -1,6 +1,7 @@
 {
   pkgs,
   inputs,
+  config,
   ...
 }:
 # games
@@ -15,6 +16,8 @@
     winetricks
     prismlauncher
   ];
+
+  
 
   #programs.gamescope.enable = true;
 }

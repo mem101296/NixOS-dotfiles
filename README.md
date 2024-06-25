@@ -9,12 +9,11 @@
 ``nix flake update``
 
 
-### *Note: Now beginner friendly. I still have to go and add comments. I recommend a basic understanding of Nix language. See below for resources* ###
+> *Note: ZSH, Oh-my-zsh, and Powerlevel10k are not yet working*
+
+### *Note: I added huge comments for first timers to make it easy to understand* ###
 
 ---
-
-A huge amount of credit is given to fufexan. This is heavely based off their dotfiles
-https://github.com/fufexan/dotfiles
 
 **Resources for newbies and myself:**
 
@@ -51,8 +50,6 @@ https://github.com/fufexan/dotfiles
 
 - Other resources:
     - https://www.chrisportela.com/posts/home-manager-flake/
-    - https://nixos.wiki/wiki/Rust#Developing_Rust_projects_using_Nix
-    - https://github.com/cpu/rust-flake/blob/main/flake.nix
 
 - Conver Gnone settings to nix flake
     - https://github.com/gvolpe/dconf2nix
