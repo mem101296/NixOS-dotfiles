@@ -87,8 +87,5 @@ in {
       workspace_swipe = false;
     };
 
-    master = {
-      new_is_master = true;
-    };
   };  
 }

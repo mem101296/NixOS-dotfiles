@@ -36,6 +36,7 @@
     r2modman
     #hdos
     flatpak
+    notesnook
 
     
     #media

@@ -94,8 +94,10 @@
       #inputs.systems.follows = "hyprland/systems";
     };    
 
-    nix-citizen.url = "github:LovingMelody/nix-citizen";
-    nix-citizen.inputs.nix-gaming.follows = "nix-gaming";
+    nix-citizen = {
+        url = "github:LovingMelody/nix-citizen";
+        inputs.nix-gaming.follows = "nix-gaming";
+      };
 
     nix-index-db = {
       url = "github:Mic92/nix-index-database";
