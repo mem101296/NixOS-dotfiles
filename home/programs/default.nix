@@ -10,7 +10,7 @@
     ./media.nix
     ./gtk.nix
     ./misc.nix
-    ./nnn.nix
+    #./nnn.nix
     #./trayer.nix
     ./office
     #./wayland

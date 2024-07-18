@@ -2,7 +2,7 @@
 
 {
   imports = [
-    #./themes.nix
+    ./themes.nix
     ./languages.nix
   ];
   programs.helix = {
@@ -21,7 +21,7 @@
             marksman #markdown
             nil #nixos
             nodePackages.bash-language-server #bash
-            nodePackages.vscode-css-languageserver-bin #css
+            #nodePackages.vscode-css-languageserver-bin #css
             nodePackages.vscode-langservers-extracted
             shellcheck
             taplo #toml
@@ -34,7 +34,7 @@
         ];
     });
     settings = {
-      theme = "base16_terminal";
+      theme = "papercolor-dark-new";
       editor = {
         color-modes = true;
         true-color = true;
@@ -46,18 +46,11 @@
           render = true;
           rainbow-option = "dim";
         };
-
-        #        rainbow-brackets = true;
       };
       keys.normal = {
         C-a = "jump_view_left";
         C-r = "jump_view_right";
       };
     };
-    #themes = {
-    #  monokai_pro = {
-    #    "ui.background" = "#001c1ccc";  
-    #  };
-    #};
   };
 }

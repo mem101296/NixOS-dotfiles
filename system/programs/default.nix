@@ -6,7 +6,7 @@
     ./zsh.nix
     ./flatpak.nix
     #./shell.nix
-    #./virtualisation.nix
+    ./virtualisation.nix
   ];
 
   programs = {

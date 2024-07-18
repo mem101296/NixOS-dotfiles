@@ -5,6 +5,7 @@ let
     ./programs
     ./services
     ./services/teamviewer.nix
+    ./services/docker.nix
   ];
 
 in {

@@ -2,8 +2,8 @@
 
 {
   xdg.configFile."hypr/hyprpaper.conf".text = ''
-    preload = ~/nixConfig/background/darkMountains.jpeg
-    wallpaper = ,contain:~/nixConfig/background/darkMountains.jpeg
+    preload = ~/nixConfig/background/ai-rendered-space.jpg
+    wallpaper = ,contain:~/nixConfig/background/ai-rendered-space.jpg
   '';
 
   #services.hyprpaper = {

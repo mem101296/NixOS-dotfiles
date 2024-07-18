@@ -4,14 +4,16 @@
     bind = [
       #"$mod, L, exec, loginctl lock-session"
       "$mod, L, exec, loginctl lock-session"
-      "$mod, W, exec, kitty"
+      "$mod, W, exec, wezterm"
       "$mod, P, exec, nautilus -w"
-      "$mod, D, exec, rofi -show drun"
+      #"$mod, D, exec, rofi -show drun"
+      "$mod, D, exec, ags -b hypr ags -t launcher"
 
       # Window mod binds
       "$mod, Q, killactive,"
       "$mod SHIFT, R, exec, hyprctl reload,"
       "$mod SHIFT, Q, exit,"
+      "$mod SHIFT, E, exec, ags -b hypr ags -r powermenu"
       "$mod, C, togglefloating,"
       "$mod SHIFT, B, pseudo," # dwindle
       "$mod, X, togglesplit," # dwindle

@@ -1,4 +1,4 @@
-{ config, ... }: 
+{ config, inputs, pkgs, ... }: 
 
 let
   
@@ -6,7 +6,11 @@ let
   
 in {
   #wayland.windowManager.hyprland.enable = true;
-  wayland.windowManager.hyprland.settings = {
+  wayland.windowManager.hyprland = {
+  plugins = [
+    #inputs.hyprscroller.packages.${pkgs.system}.default
+  ];  
+  settings = {
     "$mod" = "SUPER";
     env = [
       "QT_WAYLAND_DISABLE_WINDOWDECORATION,1"
@@ -14,7 +18,8 @@ in {
 
     exec-once = [
       "hyprctl setcursor ${pointer.name} ${toString pointer.size}"
-      "waybar"
+      #"waybar"
+      "ags -b hypr"
       #"hyprlock"
      # "swayidle -w timeout 300 'swaylock -f -C ~/.config/swaylock/config' timeout 360 'hyprctl dispatch dpms off' resume 'hyprctl dispatch dpms on'"
     ];
@@ -87,5 +92,6 @@ in {
       workspace_swipe = false;
     };
 
+  };
   };  
 }

@@ -61,6 +61,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    ags = {
+      url = "github:Aylur/ags";
+    };
+
     hypridle = {
       url = "github:hyprwm/hypridle";
       inputs.hyprlang.follows = "hyprland/hyprlang";
@@ -68,7 +72,10 @@
       #inputs.systems.follows = "hyprland/systems";
     };
 
-    hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
+    hyprland = {
+      url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
+      inputs.nixpkgs.follows = "nixpkgs";
+      };
 
     hyprland-contrib = {
       url = "github:hyprwm/contrib";
@@ -78,8 +85,14 @@
     hyprland-plugins = {
       url = "github:hyprwm/hyprland-plugins";
       inputs.hyprland.follows = "hyprland";
+      };
+        
+        
+    hyprscroller = {
+      url = "github:dawsers/hyprscroller";
+      inputs.hyprland.follows = "hyprland";
     };
-
+    
     hyprlock = {
       url = "github:hyprwm/hyprlock";
       inputs.hyprlang.follows = "hyprland/hyprlang";

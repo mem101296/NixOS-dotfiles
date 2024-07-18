@@ -29,8 +29,8 @@
         sort_sensitive = true;
         sort_reverse = false;
         sort_dir_first = true;
-        linemode = "none";
-        show_hidden = false;
+        linemode = "size";
+        show_hidden = true;
         show_symlink = true;
       };
 

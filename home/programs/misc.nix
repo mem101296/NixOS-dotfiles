@@ -6,7 +6,7 @@
   home.packages = with pkgs; [
 
     #oh-my-zsh
-    zellij
+    #zellij
     imv
     git
     librewolf

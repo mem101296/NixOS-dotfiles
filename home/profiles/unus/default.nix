@@ -28,7 +28,7 @@
     ../../services/system/udiskie.nix
 
     # wayland-specific
-    #../../services/wayland/hyprpaper.nix
+    ../../services/wayland/hyprpaper.nix
     #../../services/wayland/hypridle.nix
     #../../services/wayland/swayidle.nix
 

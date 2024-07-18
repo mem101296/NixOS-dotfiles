@@ -7,6 +7,7 @@
     wineWowPackages.staging
     wineWowPackages.waylandFull
     wineWowPackages.fonts
+    wineWowPackages.full
     winetricks
     glfw-wayland-minecraft
   ];

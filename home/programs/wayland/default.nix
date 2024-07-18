@@ -4,10 +4,10 @@
     ./hyprland
     #./rofi.nix
     #./swayidle.nix
-    #./swaylock.nix
-    ./waybar
+    ./swaylock.nix
+    #./waybar
     #./wlogout.nix
-    #./hyprlock.nix
+    ./hyprlock.nix
   ];
 
   home.packages = with pkgs; [
