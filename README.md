@@ -8,10 +8,12 @@
 
 ``nix flake update``
 
+---
 
-> *Note: ZSH, Oh-my-zsh, and Powerlevel10k are not yet working*
+**My flakes are heavly based off of Fufexan dotfiles. Of course I'm modified what I copied to fix my system.**
+https://github.com/fufexan/dotfiles
 
-### *Note: I added huge comments for first timers to make it easy to understand* ###
+### *This is not beginner freindly. I do not have many comments yet. See resources below to learn* ###
 
 ---
 
