@@ -21,7 +21,7 @@
     #Commenting out for now
     # system services
     #../../services/system/dunst.nix
-    #../../services/system/kdeconnect.nix
+    ../../services/kdeconnect.nix
     ../../services/system/polkit-agent.nix
     #../../services/system/power-monitor.nix
     #../../services/system/syncthing.nix
@@ -29,7 +29,7 @@
 
     # wayland-specific
     ../../services/wayland/hyprpaper.nix
-    #../../services/wayland/hypridle.nix
+    ../../services/wayland/hypridle.nix
     #../../services/wayland/swayidle.nix
 
     #Gotta see if Zillij falls into emulators

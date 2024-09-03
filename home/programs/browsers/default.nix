@@ -2,8 +2,8 @@
 
 #For programs without configs yet
 
-{
-  home.packages = with pkgs; [
-    librewolf
-  ];
-}
+#{
+#  home.packages = with pkgs; [
+#    librewolf
+#  ];
+#}

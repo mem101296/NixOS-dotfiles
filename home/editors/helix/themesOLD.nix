@@ -1,3 +1,5 @@
+#Monokai pro but with a different background
+
 # Author : WindSoilder<WindSoilder@outlook.com>
 # The unofficial Monokai Pro theme, simply migrate from jetbrains monokai pro theme: https://github.com/subtheme-dev/monokai-pro
 # Credit goes to the original creator: https://monokai.pro

@@ -1,5 +1,7 @@
 { inputs, pkgs, ... }:
 
+#Helix config file, see helix doc for what everything means.
+
 {
   imports = [
     ./themes.nix
@@ -7,6 +9,7 @@
   ];
   programs.helix = {
     enable = true;
+    #This is injecting the lint servers to enable autocomplete, spell check, etc
     package = inputs.helix.packages.${pkgs.system}.default.overrideAttrs (old: {
       makeWrapperArgs = with pkgs;
         old.makeWrapperArgs

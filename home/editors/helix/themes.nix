@@ -1,3 +1,5 @@
+#this is just papercolor-light + papercolor-dark but with a transparent background
+
 {
   programs.helix.themes = {
     papercolor-dark-new = {

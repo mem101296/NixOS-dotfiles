@@ -9,7 +9,7 @@
     #zellij
     imv
     git
-    librewolf
+    #librewolf
     ungoogled-chromium
     glxinfo
     

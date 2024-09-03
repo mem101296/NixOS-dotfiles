@@ -1,14 +1,12 @@
 #this is to mount nfs on boot
-{ pkgs, lib, ... }:
+{ config, nixpkgs, pkgs, vars, lib, ... }:
 with lib;
 
 {
   boot.supportedFilesystems = [ "nfs" ];
   services.rpcbind.enable = true;
   environment.systemPackages = with pkgs; [
-    nfs-utils
-    libnfs
-    gvfs
+    pkgs.nfs-utils
   ];
   #fileSystems."/home/exspiravit/files" = {
   #  device = "10.150.70.200:/mnt/Pool1/DataSet";
@@ -18,8 +16,6 @@ with lib;
   fileSystems."/home/exspiravit/HoloVault" = {
     device = "10.150.70.200:/mnt/Pool1/DataSet/holovault";
     fsType = "nfs";
-    options = [ "nfsvers=4.1" ];
+    options = [ "nfsvers=4" ];
   };
-  #networking.firewall.allowedTCPPorts = [ 2049 ];
-  networking.firewall.enable = false;
 }

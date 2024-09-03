@@ -4,6 +4,7 @@
 
   #stuff needed to run games
   environment.systemPackages = with pkgs; [
+    linuxKernel.packages.linux_zen.xone   
     wineWowPackages.staging
     wineWowPackages.waylandFull
     wineWowPackages.fonts
@@ -46,5 +47,7 @@
     "steam-original"
     "steam-runtime"
   ];
+
+  hardware.xone.enable = true; 
 
 }

@@ -1,5 +1,7 @@
 { pkgs, ... }: 
 
+#This enables the polkit so passwords and ssh can be used
+
 {
   systemd.user.services.polkit-gnome-authentication-agent-1 = {
     Unit.Description = "polkit-gnome-authentication-agent-1";

@@ -1,5 +1,7 @@
 { inputs, pkgs, ... }:
 
+#This passes inputs from nix.flake, dictates home directory, and for now holds ags config
+
 {
 
   imports = [

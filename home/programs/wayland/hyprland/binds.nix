@@ -12,8 +12,8 @@
       # Window mod binds
       "$mod, Q, killactive,"
       "$mod SHIFT, R, exec, hyprctl reload,"
-      "$mod SHIFT, Q, exit,"
-      "$mod SHIFT, E, exec, ags -b hypr ags -r powermenu"
+      "$mod SHIFT, E, exit,"
+      "$mod SHIFT, Q, exec, ags -b hypr ags -t powermenu"
       "$mod, C, togglefloating,"
       "$mod SHIFT, B, pseudo," # dwindle
       "$mod, X, togglesplit," # dwindle

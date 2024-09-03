@@ -17,7 +17,17 @@ https://github.com/fufexan/dotfiles
 
 ---
 
-**Resources for newbies and myself:**
+Layout:
+
+Archives - for old flakes I no longer use and do no want within the structure
+background - contains images that I use for my background
+home - home manager, see the README.md within for that layout
+hosts - unique hardware and host configuration
+system - flakes that do not belong within home-manager
+
+<details>
+
+<summary>Resources I used to learn NixOS</summary>
 
 
 - Video discussing what nixos and nix flakes are
@@ -55,5 +65,7 @@ https://github.com/fufexan/dotfiles
 
 - Conver Gnone settings to nix flake
     - https://github.com/gvolpe/dconf2nix
+
+</details>
 
 ---
